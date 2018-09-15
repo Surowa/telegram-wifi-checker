@@ -1,6 +1,7 @@
 import subprocess
 import time
 import telegram
+import sys
 
 bot = telegram.Bot(token="PUT TELEGRAM TOKEN HERE")
 chat_id=PUT CHAT ID HERE
@@ -13,6 +14,6 @@ if __name__ == '__main__':
         p_status = p.wait()
         if output:
             bot.sendMessage(chat_id=chat_id, text="Johnny is home!")
-            exit
+            Raise SystemExit
         else:
           time.sleep(1)
